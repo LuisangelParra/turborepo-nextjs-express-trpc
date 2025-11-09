@@ -8,6 +8,7 @@
     ]
   },
   "include": [
+    "global.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "next-env.d.ts",
