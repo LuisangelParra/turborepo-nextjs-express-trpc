@@ -6,6 +6,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:generate": "drizzle-kit generate:pg --config=packages/db/drizzle.config.ts",
+    "db:migrate": "drizzle-kit push:pg --config=packages/db/drizzle.config.ts",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
@@ -15,8 +17,15 @@
     "turbo": "^2.6.0",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.21.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@types/pg": "^8.15.6",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.21.4",
+    "drizzle-orm": "^0.32.2",
+    "pg": "^8.16.3"
   }
 }
