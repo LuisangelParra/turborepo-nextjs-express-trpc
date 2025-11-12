@@ -7,7 +7,7 @@ const t = initTRPC.create();
 /**
  * Type definition for a mock TODO item.
  */
-interface MockTodo {
+export interface MockTodo {
   id: number;
   title: string;
   completed: boolean;
